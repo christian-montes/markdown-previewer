@@ -9,6 +9,8 @@ class Welcome extends React.Component {
   }
 }
 
+
+
 const containerElem = document.createElement('div');
 containerElem.setAttribute('id', 'root');
 document.body.appendChild(containerElem);
