@@ -1,5 +1,7 @@
 import React, {useState} from "react";
 import ReactDOM from "react-dom";
+import 'bootstrap/dist/css/bootstrap.min.css'
+import './styles.scss'
 const marked = require('marked');
 
 // setting options for marked
@@ -12,32 +14,39 @@ marked.setOptions({
 
 // creating a function component
 function MDPreviewer() {
-  // eslint-disable-next-line no-unused-vars
   const [markdown, setMarkdown] = useState(parsedText)
 
   return (
     <>
-      Enter Github flavored markdown:
-      <br />
-      <textarea
-      // placeholder variable added after
+      <div 
         id='preview'
-        onChange={(e) => {setMarkdown(marked(e.target.value, {renderer: renderer}))}}
-        defaultValue={text}>
-      </textarea>
+        className='d-flex'>
+        <p>Enter Github flavored markdown:</p>
+        <br />
+        <textarea
+          // placeholder variable in defaultValue
+          id='preview'
+          onChange={(e) => {setMarkdown(marked(e.target.value, {renderer: renderer}))}}
+          defaultValue={text}>
+        </textarea>
+      </div>
       <br /> <br />
 
-      Parsed markdown (HTML):
-      <br />
-      <div
-        id='parsed'
-        dangerouslySetInnerHTML={{__html: markdown}}>
+      <div>
+        Parsed markdown (HTML):
+        <br />
+        <div
+          id='parsed'
+          dangerouslySetInnerHTML={{__html: markdown}}>
+        </div>
       </div>
     </>
   )
 }
 
-const text = `<h2>This is a level 2 header markdown format</h2>`;
+const text = `## Hello React
+### Hello React
+#### Hello React`;
 const parsedText = marked(text, {renderer: renderer})
 
 
