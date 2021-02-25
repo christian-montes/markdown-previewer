@@ -1,1 +1,23 @@
-@import "~bootstrap/scss/bootstrap"
+@import "~bootstrap/scss/bootstrap";
+
+// markdown border color
+$markdown: tomato;
+// preview border color
+$preview: green;
+$radius: 10px;
+
+body {
+    background-color: lightgray;
+}
+
+#markdown {
+    border: 2px solid $markdown;
+    border-radius: $radius;
+    background-color: hsla(0, 100%, 70%, 0.3);
+}
+
+#preview-container {
+    border: 2px solid $preview;
+    border-radius: $radius;
+    background-color: hsla(120, 60%, 70%, 0.3);
+}
