@@ -12,15 +12,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/christian-montes/react-webpack.git"
+    "url": "git+https://github.com/christian-montes/markdown-previewer.git"
   },
   "keywords": [],
   "author": "Christian Montes",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/christian-montes/react-webpack/issues"
+    "url": "https://github.com/christian-montes/markdown-previewer/issues"
   },
-  "homepage": "https://github.com/christian-montes/react-webpack#readme",
+  "homepage": "https://github.com/christian-montes/markdown-previewer#readme",
   "devDependencies": {
     "@babel/core": "^7.12.16",
     "@babel/eslint-parser": "^7.12.16",
